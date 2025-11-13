@@ -1,0 +1,32 @@
+schema document {
+    document document {
+        field id type string {
+            indexing: summary | attribute
+        }
+
+        field title type string {
+            indexing: summary | index
+            index: enable-bm25
+        }
+
+        field content type string {
+            indexing: summary | index
+            index: enable-bm25
+        }
+
+        field timestamp type long {
+            indexing: summary | attribute
+            attribute: fast-search
+        }
+    }
+
+    fieldset default {
+        fields: title, content
+    }
+
+    rank-profile default {
+        first-phase {
+            expression: bm25(title) + bm25(content)
+        }
+    }
+}
