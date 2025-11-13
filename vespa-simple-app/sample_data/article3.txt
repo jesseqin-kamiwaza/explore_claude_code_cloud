@@ -1,0 +1,13 @@
+向量搜索是现代搜索系统的重要组成部分。它使用机器学习模型（如 BERT、Sentence Transformers）将文本转换为高维向量。
+
+向量搜索的优势：
+- 语义理解：能够理解查询的语义含义，而不仅仅是关键词匹配
+- 跨语言搜索：可以在不同语言之间进行搜索
+- 多模态搜索：可以搜索文本、图像、音频等不同类型的数据
+
+常用的向量搜索算法包括：
+- HNSW（Hierarchical Navigable Small World）
+- IVF（Inverted File Index）
+- LSH（Locality Sensitive Hashing）
+
+Vespa 原生支持向量搜索，可以与传统的关键词搜索结合使用。
